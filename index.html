@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ene94Tattoo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ene94Tattoo</h1>
+    <p>Estudio de tatuajes y piercings en crecimiento. Originalidad, confianza y arte.</p>
+    <a href="#reserva" class="btn">Reserva tu cita</a>
+  </header>
+
+  <section id="galeria">
+    <h2>Galería de trabajos</h2>
+    <div class="grid">
+      <!-- Reemplaza con tus imágenes reales -->
+      <img src="images/tatuaje1.jpg" alt="Tatuaje 1" />
+      <img src="images/tatuaje2.jpg" alt="Tatuaje 2" />
+      <img src="images/tatuaje3.jpg" alt="Tatuaje 3" />
+    </div>
+  </section>
+
+  <section id="reserva">
+    <h2>Reservar cita</h2>
+    <form action="ene94.web@gmail.com" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input type="tel" name="telefono" placeholder="Teléfono o WhatsApp" required />
+      <input type="text" name="estilo" placeholder="Estilo deseado" required />
+      <input type="text" name="zona" placeholder="Zona del cuerpo" required />
+      <input type="text" name="fecha" placeholder="Fecha y hora deseada" required />
+      <textarea name="referencias" placeholder="Link o descripción de referencias" rows="4"></textarea>
+      <button type="submit">Enviar reserva</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ene94Tattoo</p>
+    <a href="https://wa.me/34XXXXXXXXX" target="_blank" class="whatsapp">💬 WhatsApp Directo</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
