@@ -3,29 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ene94Tattoo</title>
+  <title>Caribbean Air Designs | Estudio de Tatuajes</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Ene94Tattoo</h1>
-    <p>Estudio de tatuajes y piercings en crecimiento. Originalidad, confianza y arte.</p>
-    <a href="#reserva" class="btn">Reserva tu cita</a>
+  <header class="hero">
+    <nav>
+      <h1 class="logo">Caribbean Air Designs</h1>
+      <ul class="nav-links">
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#reserva">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Arte eterno sobre piel</h2>
+      <p>Originalidad. Precisión. Estilo. Cada tatuaje, una historia.</p>
+      <a href="#reserva" class="btn">Reserva tu cita</a>
+    </div>
   </header>
 
   <section id="galeria">
-    <h2>Galería de trabajos</h2>
+    <h2>Mis Trabajos</h2>
     <div class="grid">
-      <!-- Reemplaza con tus imágenes reales -->
-      <img src="images/tatuaje1.jpg" alt="Tatuaje 1" />
-      <img src="images/tatuaje2.jpg" alt="Tatuaje 2" />
-      <img src="images/tatuaje3.jpg" alt="Tatuaje 3" />
+      <a href="images/tatuaje1.png" data-lightbox="galeria" data-title="Tatuaje 1">
+        <img src="images/tatuaje1.png" alt="Tatuaje 1" />
+      </a>
+      <a href="images/tatuaje2.png" data-lightbox="galeria" data-title="Tatuaje 2">
+        <img src="images/tatuaje2.png" alt="Tatuaje 2" />
+      </a>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre mí</h2>
+    <div class="sobre-mi">
+      <img src="images/tatuador1.png" alt="Sebastian, tatuador principal">
+      <div>
+        <h3>Soy Ene (Sebastian)</h3>
+        <p>Soy el tatuador detrás de Caribbean Air Designs. Mi enfoque combina técnica, respeto y personalidad en cada pieza. Trabajo con estilos como el realismo, los tatuajes minimalistas y los flashes con esencia conceptual.</p>
+        <p>Cada cliente es una historia, y mi objetivo es transformar esa historia en arte sobre piel, con profesionalismo y dedicación.</p>
+      </div>
     </div>
   </section>
 
   <section id="reserva">
-    <h2>Reservar cita</h2>
-    <form action="ene94.web@gmail.com" method="POST">
+    <h2>Reserva tu cita</h2>
+    <form action="https://formsubmit.co/ene94.web@gmail.com" method="POST">
       <input type="text" name="nombre" placeholder="Nombre completo" required />
       <input type="tel" name="telefono" placeholder="Teléfono o WhatsApp" required />
       <input type="text" name="estilo" placeholder="Estilo deseado" required />
@@ -36,11 +65,17 @@
     </form>
   </section>
 
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas? Escríbeme directamente por WhatsApp o visita mis redes sociales.</p>
+    <a href="https://wa.me/34668582319" target="_blank" class="whatsapp">💬 WhatsApp Directo</a>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Ene94Tattoo</p>
-    <a href="https://wa.me/34XXXXXXXXX" target="_blank" class="whatsapp">💬 WhatsApp Directo</a>
+    <p>&copy; 2025 Caribbean Air Designs. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
