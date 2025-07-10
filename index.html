@@ -72,11 +72,12 @@
 
   <section id="clientes">
     <h2>Sube tu idea y deja tu comentario</h2>
-    <form action="https://hooks.zapier.com/hooks/catch/23742605/u3nsxbo/" method="POST">
+    <form action="https://hooks.zapier.com/hooks/catch/23742605/u3nsxbo/" method="POST" enctype="multipart/form-data">
       <input type="text" name="nombre" placeholder="Tu nombre" required />
       <input type="email" name="correo" placeholder="Correo electrónico" />
       <input type="tel" name="telefono" placeholder="Teléfono" />
       <textarea name="comentario" placeholder="Comentario o idea" rows="4"></textarea>
+      <input type="file" name="imagen" accept="image/*" />
       <button type="submit">Enviar idea</button>
     </form>
   </section>
