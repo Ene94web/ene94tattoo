@@ -71,18 +71,19 @@
   </section>
 
   <section id="clientes">
-  <h2>Sube tu idea y deja tu comentario</h2>
-  https://hooks.zapier.com/hooks/catch/23742605/u3n9f0t/
-    <input type="text" name="nombre" placeholder="Tu nombre" required />
-    <input type="email" name="correo" placeholder="Correo electrónico" />
-    <input type="tel" name="telefono" placeholder="Teléfono" />
-    <p style="font-size: 0.9rem; color: #bbb;">Debes rellenar al menos uno: correo o teléfono *</p>
-    <textarea name="comentario" placeholder="Deja un comentario u opinión sobre el estudio o tu idea de tatuaje" rows="4"></textarea>
-    <input type="file" name="imagen" accept="image/*" />
-    <button type="submit">Enviar idea</button>
-  </form>
-</section>
-
+    <h2>Sube tu idea y deja tu comentario</h2>
+    <form action="https://hooks.zapier.com/hooks/catch/17542335/3r7zknn/" method="POST" enctype="multipart/form-data">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="correo" placeholder="Correo electrónico" />
+      <input type="tel" name="telefono" placeholder="Teléfono" />
+      <p style="font-size: 0.9rem; color: #bbb;">Debes rellenar al menos uno: correo o teléfono *</p>
+      <textarea name="comentario" placeholder="Deja un comentario u opinión sobre el estudio o tu idea de tatuaje" rows="4"></textarea>
+      <input type="file" name="imagen" accept="image/*" />
+      <input type="hidden" name="_subject" value="Nuevo envío de cliente desde la web">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Enviar idea</button>
+    </form>
+  </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
