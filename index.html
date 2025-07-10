@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caribbean Air Designs | Estudio de Tatuajes</title>
+  <meta name="description" content="Estudio de tatuajes profesional en donde cada obra sobre la piel cuenta una historia. Tatuajes por Ene, en Caribbean Air Designs." />
+  <meta name="keywords" content="tatuajes, estudio de tatuajes, Caribbean Air Designs, Ene, Sebastian, tattoo Valencia, realismo, diseño personalizado" />
+  <meta name="author" content="Caribbean Air Designs" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +22,7 @@
         <li><a href="#galeria">Galería</a></li>
         <li><a href="#sobre">Sobre mí</a></li>
         <li><a href="#reserva">Reservas</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -65,10 +70,30 @@
     </form>
   </section>
 
+  <section id="clientes">
+    <h2>Sube tu idea y deja tu comentario</h2>
+    <form action="https://hooks.zapier.com/hooks/catch/123456/abcde/" method="POST">
+
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="correo" placeholder="Correo electrónico" />
+      <input type="tel" name="telefono" placeholder="Teléfono" />
+      <p style="font-size: 0.9rem; color: #bbb;">Debes rellenar al menos uno: correo o teléfono *</p>
+      <textarea name="comentario" placeholder="Deja un comentario u opinión sobre el estudio o tu idea de tatuaje" rows="4"></textarea>
+      <input type="file" name="imagen" accept="image/*" required />
+      <input type="hidden" name="_subject" value="Nuevo envío de cliente desde la web">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Enviar idea</button>
+    </form>
+  </section>
+
   <section id="contacto">
     <h2>Contacto</h2>
     <p>¿Tienes dudas? Escríbeme directamente por WhatsApp o visita mis redes sociales.</p>
     <a href="https://wa.me/34668582319" target="_blank" class="whatsapp">💬 WhatsApp Directo</a>
+
+    <div class="instagram-embed">
+      <iframe src="https://snapwidget.com/embed/1041782" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:500px;"></iframe>
+    </div>
   </section>
 
   <footer>
