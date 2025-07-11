@@ -1,14 +1,17 @@
 // Efecto fade-in al hacer scroll
-const fadeIns = document.querySelectorAll('.fade-in');
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeIns = document.querySelectorAll(".fade-in");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
   });
-}, {
-  threshold: 0.1
-});
 
-fadeIns.forEach(el => observer.observe(el));
+  fadeIns.forEach((el) => observer.observe(el));
+});
