@@ -47,4 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.innerHTML = "💬";
   btn.className = "whatsapp-float";
   document.body.appendChild(btn);
+
+  // Aumentar tamaño imagen tatuador en escritorio
+  const fotoTatuador = document.querySelector(".sobre-mi img");
+  if (fotoTatuador && window.innerWidth > 768) {
+    fotoTatuador.style.width = "300px";
+  }
 });
