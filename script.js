@@ -90,15 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
     textoContacto.style.marginBottom = "10px";
   }
 
-  // Borde y sombra suave decorativa en encabezados
+  // Borde igual a inputs en encabezados y centrado
   document.querySelectorAll("section h2").forEach(h2 => {
-    h2.style.border = "2px solid rgba(255, 255, 255, 0.15)";
-    h2.style.padding = "10px 20px";
-    h2.style.borderRadius = "8px";
+    h2.style.border = "1px solid #800000";
+    h2.style.borderRadius = "6px";
+    h2.style.padding = "12px 24px";
     h2.style.display = "inline-block";
-    h2.style.margin = "0 auto 20px";
-    h2.style.background = "linear-gradient(90deg, rgba(128,0,0,0.3), rgba(0,0,0,0.3))";
-    h2.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.4)";
+    h2.style.textAlign = "center";
+    h2.style.margin = "20px auto";
+    h2.style.color = "#fff";
+    h2.style.backgroundColor = "rgba(0,0,0,0.4)";
+    h2.style.boxShadow = "0 0 8px rgba(128, 0, 0, 0.6)";
   });
 
   // Botón de Instagram atractivo bajo el formulario
@@ -131,4 +133,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     contactoSection.appendChild(instaBtn);
   }
+
+  // Animación de precarga con logo
+  const loader = document.createElement("div");
+  loader.id = "preloader";
+  loader.style.position = "fixed";
+  loader.style.top = 0;
+  loader.style.left = 0;
+  loader.style.width = "100vw";
+  loader.style.height = "100vh";
+  loader.style.backgroundColor = "#000";
+  loader.style.zIndex = 9999;
+  loader.style.display = "flex";
+  loader.style.alignItems = "center";
+  loader.style.justifyContent = "center";
+  loader.style.transition = "opacity 1s ease";
+
+  const logo = document.createElement("img");
+  logo.src = "images/logo.png";
+  logo.alt = "Logo Caribbean Air Designs";
+  logo.style.width = "180px";
+  logo.style.animation = "fadeZoom 2.5s ease-out forwards";
+
+  loader.appendChild(logo);
+  document.body.appendChild(loader);
+
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    setTimeout(() => document.body.removeChild(loader), 1000);
+  }, 2000);
 });
