@@ -57,13 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Estilizar enlace de WhatsApp directo
   const enlaceWhatsApp = document.querySelector("a[href*='wa.me']");
   if (enlaceWhatsApp) {
-    enlaceWhatsApp.style.display = "inline-block";
-    enlaceWhatsApp.style.textAlign = "center";
+    enlaceWhatsApp.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg' alt='WhatsApp' style='height: 24px; vertical-align: middle; margin-right: 8px;'>Habla conmigo por WhatsApp";
+    enlaceWhatsApp.style.display = "flex";
+    enlaceWhatsApp.style.alignItems = "center";
+    enlaceWhatsApp.style.justifyContent = "center";
     enlaceWhatsApp.style.color = "#25D366";
     enlaceWhatsApp.style.fontWeight = "bold";
     enlaceWhatsApp.style.textDecoration = "none";
     enlaceWhatsApp.style.fontSize = "1.2rem";
-    enlaceWhatsApp.style.margin = "20px auto";
-    enlaceWhatsApp.style.display = "block";
+    enlaceWhatsApp.style.margin = "30px auto";
+    enlaceWhatsApp.style.gap = "10px";
+    enlaceWhatsApp.style.padding = "10px 20px";
+    enlaceWhatsApp.style.borderRadius = "8px";
+    enlaceWhatsApp.style.border = "2px solid #25D366";
+    enlaceWhatsApp.style.maxWidth = "fit-content";
   }
 });
