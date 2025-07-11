@@ -89,4 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
     textoContacto.style.textAlign = "center";
     textoContacto.style.marginBottom = "10px";
   }
+
+  // Borde alrededor de encabezados h2 en secciones
+  document.querySelectorAll("section h2").forEach(h2 => {
+    h2.style.border = "2px solid rgba(255, 255, 255, 0.15)";
+    h2.style.padding = "10px 20px";
+    h2.style.borderRadius = "8px";
+    h2.style.display = "inline-block";
+    h2.style.margin = "0 auto 20px";
+  });
 });
