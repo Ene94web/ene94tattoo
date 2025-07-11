@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.style.transition = "opacity 1s ease";
 
   const logo = document.createElement("img");
-  logo.src = "images/logo.png";
+  logo.src = "images/logocarga.png";
   logo.alt = "Logo Caribbean Air Designs";
   logo.style.width = "180px";
   logo.style.animation = "fadeZoom 2.5s ease-out forwards";
