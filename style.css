@@ -199,3 +199,58 @@ footer {
   color: #800000;
   border-top: 2px solid #800000;
 }
+/* -------------------- */
+/* Responsive Móvil 📱  */
+/* -------------------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-mi {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .sobre-mi img {
+    width: 150px;
+  }
+
+  form {
+    padding: 0 10px;
+  }
+
+  input, textarea, button {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
