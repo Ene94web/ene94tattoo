@@ -90,51 +90,28 @@ document.addEventListener("DOMContentLoaded", () => {
     textoContacto.style.marginBottom = "10px";
   }
 
-  // Borde igual a inputs en encabezados y centrado
+  // Estilo moderno y animación a h2 como botones instagram
   document.querySelectorAll("section h2").forEach(h2 => {
-    h2.style.border = "1px solid #800000";
-    h2.style.borderRadius = "6px";
-    h2.style.padding = "12px 24px";
-    h2.style.display = "inline-block";
     h2.style.textAlign = "center";
-    h2.style.margin = "20px auto";
+    h2.style.margin = "40px auto 30px";
+    h2.style.fontSize = "2.2rem";
     h2.style.color = "#fff";
-    h2.style.backgroundColor = "rgba(0,0,0,0.4)";
-    h2.style.boxShadow = "0 0 8px rgba(128, 0, 0, 0.6)";
+    h2.style.background = "linear-gradient(to right, #800000, #ff4d4d)";
+    h2.style.webkitBackgroundClip = "text";
+    h2.style.webkitTextFillColor = "transparent";
+    h2.style.transition = "transform 0.3s ease, text-shadow 0.3s ease";
+    h2.style.cursor = "pointer";
+    h2.addEventListener("mouseenter", () => {
+      h2.style.transform = "scale(1.05)";
+      h2.style.textShadow = "0 0 10px rgba(255, 77, 77, 0.8)";
+    });
+    h2.addEventListener("mouseleave", () => {
+      h2.style.transform = "scale(1)";
+      h2.style.textShadow = "none";
+    });
   });
 
-  // Botón de Instagram atractivo bajo el formulario
-  const contactoSection = document.getElementById("contacto");
-  if (contactoSection) {
-    const instaBtn = document.createElement("a");
-    instaBtn.href = "https://instagram.com/caribbean.air.designs";
-    instaBtn.target = "_blank";
-    instaBtn.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png' alt='Instagram' style='height: 24px; vertical-align: middle; margin-right: 8px;'>Sígueme en Instagram para ver más trabajos";
-    instaBtn.style.display = "flex";
-    instaBtn.style.alignItems = "center";
-    instaBtn.style.justifyContent = "center";
-    instaBtn.style.background = "linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045)";
-    instaBtn.style.color = "white";
-    instaBtn.style.fontWeight = "bold";
-    instaBtn.style.textDecoration = "none";
-    instaBtn.style.fontSize = "1.1rem";
-    instaBtn.style.margin = "20px auto";
-    instaBtn.style.padding = "10px 20px";
-    instaBtn.style.borderRadius = "8px";
-    instaBtn.style.maxWidth = "fit-content";
-    instaBtn.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
-    instaBtn.addEventListener("mouseenter", () => {
-      instaBtn.style.transform = "scale(1.05)";
-      instaBtn.style.boxShadow = "0 0 12px #fcb045";
-    });
-    instaBtn.addEventListener("mouseleave", () => {
-      instaBtn.style.transform = "scale(1)";
-      instaBtn.style.boxShadow = "none";
-    });
-    contactoSection.appendChild(instaBtn);
-  }
-
-  // Animación de precarga con logo
+  // Animación de precarga con logo y mensaje
   const loader = document.createElement("div");
   loader.id = "preloader";
   loader.style.position = "fixed";
@@ -145,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.style.backgroundColor = "#000";
   loader.style.zIndex = 9999;
   loader.style.display = "flex";
+  loader.style.flexDirection = "column";
   loader.style.alignItems = "center";
   loader.style.justifyContent = "center";
   loader.style.transition = "opacity 1s ease";
@@ -152,14 +130,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.createElement("img");
   logo.src = "images/logocarga.png";
   logo.alt = "Logo Caribbean Air Designs";
-  logo.style.width = "180px";
+  logo.style.width = "280px";
   logo.style.animation = "fadeZoom 2.5s ease-out forwards";
+  logo.style.marginBottom = "20px";
+
+  const mensaje = document.createElement("p");
+  mensaje.textContent = "Cargando arte...";
+  mensaje.style.color = "#fff";
+  mensaje.style.fontFamily = "Poppins, sans-serif";
+  mensaje.style.fontSize = "1.2rem";
+  mensaje.style.opacity = 0.8;
+  mensaje.style.animation = "fadeIn 1.5s ease-out 1.5s forwards";
 
   loader.appendChild(logo);
+  loader.appendChild(mensaje);
   document.body.appendChild(loader);
 
   setTimeout(() => {
     loader.style.opacity = 0;
     setTimeout(() => document.body.removeChild(loader), 1000);
-  }, 2000);
+  }, 2800);
 });
