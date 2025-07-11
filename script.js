@@ -38,3 +38,13 @@ document.querySelectorAll(".logo, h2, h3").forEach(el => {
     el.classList.remove("vibrar");
   });
 });
+
+// Botón flotante de WhatsApp (responsive y destacado)
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.createElement("a");
+  btn.href = "https://wa.me/34668582319";
+  btn.target = "_blank";
+  btn.innerHTML = "💬";
+  btn.className = "whatsapp-float";
+  document.body.appendChild(btn);
+});
