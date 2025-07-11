@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fotoTatuador.style.width = "300px";
   }
 
-  // Estilizar enlace de WhatsApp directo
+  // Estilizar enlace de WhatsApp directo con animación
   const enlaceWhatsApp = document.querySelector("a[href*='wa.me']");
   if (enlaceWhatsApp) {
     enlaceWhatsApp.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg' alt='WhatsApp' style='height: 24px; vertical-align: middle; margin-right: 8px;'>Habla conmigo por WhatsApp";
@@ -71,5 +71,22 @@ document.addEventListener("DOMContentLoaded", () => {
     enlaceWhatsApp.style.borderRadius = "8px";
     enlaceWhatsApp.style.border = "2px solid #25D366";
     enlaceWhatsApp.style.maxWidth = "fit-content";
+    enlaceWhatsApp.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+
+    enlaceWhatsApp.addEventListener("mouseenter", () => {
+      enlaceWhatsApp.style.transform = "scale(1.05)";
+      enlaceWhatsApp.style.boxShadow = "0 0 10px #25D366";
+    });
+    enlaceWhatsApp.addEventListener("mouseleave", () => {
+      enlaceWhatsApp.style.transform = "scale(1)";
+      enlaceWhatsApp.style.boxShadow = "none";
+    });
+  }
+
+  // Centrar texto informativo previo al botón de WhatsApp
+  const textoContacto = Array.from(document.querySelectorAll("#contacto p")).find(p => p.textContent.includes("¿Tienes dudas?"));
+  if (textoContacto) {
+    textoContacto.style.textAlign = "center";
+    textoContacto.style.marginBottom = "10px";
   }
 });
