@@ -53,4 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (fotoTatuador && window.innerWidth > 768) {
     fotoTatuador.style.width = "300px";
   }
+
+  // Estilizar enlace de WhatsApp directo
+  const enlaceWhatsApp = document.querySelector("a[href*='wa.me']");
+  if (enlaceWhatsApp) {
+    enlaceWhatsApp.style.display = "inline-block";
+    enlaceWhatsApp.style.textAlign = "center";
+    enlaceWhatsApp.style.color = "#25D366";
+    enlaceWhatsApp.style.fontWeight = "bold";
+    enlaceWhatsApp.style.textDecoration = "none";
+    enlaceWhatsApp.style.fontSize = "1.2rem";
+    enlaceWhatsApp.style.margin = "20px auto";
+    enlaceWhatsApp.style.display = "block";
+  }
 });
