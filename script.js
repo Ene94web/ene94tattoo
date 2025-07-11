@@ -90,12 +90,45 @@ document.addEventListener("DOMContentLoaded", () => {
     textoContacto.style.marginBottom = "10px";
   }
 
-  // Borde alrededor de encabezados h2 en secciones
+  // Borde y sombra suave decorativa en encabezados
   document.querySelectorAll("section h2").forEach(h2 => {
     h2.style.border = "2px solid rgba(255, 255, 255, 0.15)";
     h2.style.padding = "10px 20px";
     h2.style.borderRadius = "8px";
     h2.style.display = "inline-block";
     h2.style.margin = "0 auto 20px";
+    h2.style.background = "linear-gradient(90deg, rgba(128,0,0,0.3), rgba(0,0,0,0.3))";
+    h2.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.4)";
   });
+
+  // Botón de Instagram atractivo bajo el formulario
+  const contactoSection = document.getElementById("contacto");
+  if (contactoSection) {
+    const instaBtn = document.createElement("a");
+    instaBtn.href = "https://instagram.com/caribbean.air.designs";
+    instaBtn.target = "_blank";
+    instaBtn.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png' alt='Instagram' style='height: 24px; vertical-align: middle; margin-right: 8px;'>Sígueme en Instagram para ver más trabajos";
+    instaBtn.style.display = "flex";
+    instaBtn.style.alignItems = "center";
+    instaBtn.style.justifyContent = "center";
+    instaBtn.style.background = "linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045)";
+    instaBtn.style.color = "white";
+    instaBtn.style.fontWeight = "bold";
+    instaBtn.style.textDecoration = "none";
+    instaBtn.style.fontSize = "1.1rem";
+    instaBtn.style.margin = "20px auto";
+    instaBtn.style.padding = "10px 20px";
+    instaBtn.style.borderRadius = "8px";
+    instaBtn.style.maxWidth = "fit-content";
+    instaBtn.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+    instaBtn.addEventListener("mouseenter", () => {
+      instaBtn.style.transform = "scale(1.05)";
+      instaBtn.style.boxShadow = "0 0 12px #fcb045";
+    });
+    instaBtn.addEventListener("mouseleave", () => {
+      instaBtn.style.transform = "scale(1)";
+      instaBtn.style.boxShadow = "none";
+    });
+    contactoSection.appendChild(instaBtn);
+  }
 });
